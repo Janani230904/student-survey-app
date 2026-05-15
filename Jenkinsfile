@@ -9,7 +9,8 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/Janani230904/student-survey-app.git'
+                git branch: 'main',
+                url: 'https://github.com/Janani230904/student-survey-app.git'
             }
         }
 
