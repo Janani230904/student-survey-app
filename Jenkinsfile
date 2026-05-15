@@ -37,11 +37,15 @@ pipeline {
     post {
 
         success {
-            echo 'BUILD SUCCESS'
+            mail to: 'janurgowda239@gmail.com',
+            subject: 'Jenkins Build Success',
+            body: 'Student Survey App build completed successfully.'
         }
 
         failure {
-            echo 'BUILD FAILED'
+            mail to: 'janurgowda239@gmail.com',
+            subject: 'Jenkins Build Failed',
+            body: 'Student Survey App build failed.'
         }
     }
 }
